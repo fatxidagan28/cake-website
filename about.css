@@ -1,0 +1,168 @@
+
+.hero {
+    
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;  
+
+}
+.hero{
+    background-color: #dac0b7; 
+}
+.hero-center {
+    width: 100%;
+    text-align: center; /* Si qoraalku dhexda u yimaado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Qoraalka 'Delicious' ee hufan ee dhexda ku jira */
+.hero-text::before {
+    content: "Delicious";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%); /* Dhexda qoraalka 'About' geli */
+    font-size: 90px;
+    font-family: 'Cursive', sans-serif;
+    color: #ff5200;
+    opacity: 0.08; /* Aad u khafiif ah sidii sawirka */
+    z-index: -1;
+    white-space: nowrap;
+}
+
+/* Cinwaanka weyn ee 'About' ama 'About Us' */
+.hero-text h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    text-transform: capitalize; /* Si uu ugu ekaado qoraalka sawirka */
+}
+/* --- Styling-ka Guud --- */
+.features-section {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cinwaanka Section-ka --- */
+.section-title {
+    margin-bottom: 70px;
+}
+
+.section-title .subtitle {
+    color: #ff5200; /* Orange-ka sawirka */
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* --- Grid-ka (Desktop) --- */
+.features-grid {
+    display: flex; /* Waxay is barbar fariisanayaan Laptop-ka */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wax kasta dhexda geli */
+}
+
+/* Goobada Icons-ka */
+.icon-box {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 40px rgba(255, 82, 0, 0.08); /* Hoos khafiif ah */
+}
+
+.icon-box img {
+    width: 45px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+    max-width: 260px;
+}
+
+/* --- RESPONSIVE (Qaybta muhiimka ah) --- */
+
+/* Tablet (Ilaa 992px) */
+@media (max-width: 992px) {
+    .features-grid {
+        gap: 15px;
+    }
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile (Ilaa 768px) */
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column; /* Waxay isku beddelayaan isku hoos */
+        align-items: center;
+    }
+
+    .feature-item {
+        margin-bottom: 50px; /* Masaafo u dhexaysa blocks-ka mobile-ka */
+    }
+
+    .section-title {
+        margin-bottom: 50px;
+    }
+}
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+    .hero {
+        height: 200px; /* In yar ka yaree mobile-ka */
+    }
+    .hero-text h1 {
+        font-size: 30px;
+    }
+    .hero-text::before {
+        font-size: 60px;
+    }
+}
