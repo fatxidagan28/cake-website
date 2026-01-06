@@ -1,111 +1,166 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-
-    h2{
-        font-size:32px;
-        margin-bottom:5px;
-        font-weight:700;
-    }
-
-    .subtitle{
-        color:#666;
-        margin-bottom:40px;
-    }
-
-    .testimonials{
-        display:flex;
-        justify-content:center;
-        gap:25px;
-        flex-wrap:wrap;
-    }
-
-    .card{
-        background:white;
-        width:330px;
-        padding:25px;
-        border-radius:18px;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
-        text-align:left;
-    }
-
-    
-
-    .card p{
-        color:#444;
-        line-height:1.5;
-        margin-bottom:25px;
-        font-style:italic;
-    }
-
-    .profile{
-        display:flex;
-        align-items:center;
-        gap:12px;
-    }
-
-    .profile img{
-        width:50px;
-        height:50px;
-        border-radius:50%;
-        object-fit:cover;
-    }
-
-    .profile-name{
-        font-weight:600;
-    }
-
-    .profile-location{
-        font-size:13px;
-        color:#666;
-    }
-    .products-section {
-    padding: 80px 0;
+body {
+    line-height: 1.6;
+    color: #444;
+    overflow-x: hidden;
     background-color: #fff;
-    text-align: center;
 }
 
-.section-title {
-    margin-bottom: 50px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+/* --- Header Styling --- */
+.main-header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img { height: 40px; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active { color: #ff5200; }
+
+.order-btn {
+    background: #ff5200;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.hero-products{
+    background-color: #dac0b7;
+    text-align: center;
+    font-size: larger ; 
+    padding: auto;
+   /* width: 80px; */
+   height: 300px;
+   margin-top: 30px;
+   padding-top: 60px;
+}
+
+
+
+
+.hero {
+    
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;  
+
+}
+.hero{
+    background-color: #dac0b7; 
+}
+.hero-center {
+    width: 100%;
+    text-align: center; /* Si qoraalku dhexda u yimaado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Qoraalka 'Delicious' ee hufan ee dhexda ku jira */
+.hero-text::before {
+    content: "Delicious";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%); /* Dhexda qoraalka 'About' geli */
+    font-size: 90px;
+    font-family: 'Cursive', sans-serif;
+    color: #ff5200;
+    opacity: 0.08; /* Aad u khafiif ah sidii sawirka */
+    z-index: -1;
+    white-space: nowrap;
+}
+
+/* Cinwaanka weyn ee 'About' ama 'About Us' */
+.hero-text h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    text-transform: capitalize; /* Si uu ugu ekaado qoraalka sawirka */
+}
+/* --- Products Section --- */
+.products-section { padding: 80px 0; text-align: center; }
 
 .sub-heading {
-    color: #e65100;
+    color: #ff5200;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
 }
-
-.section-title h2 {
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-top: 10px;
-}
-
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
-
 
 .cake-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.3s;
-    padding-bottom: 20px;
+    background: #fff6f3; /* Midabka background-ka card-ka */
+    border-radius: 20px;
+    padding-bottom: 30px;
+    transition: 0.3s ease;
+    text-align: center;
 }
 
-.cake-card:hover {
-    transform: translateY(-10px);
-}
-
+.cake-card:hover { transform: translateY(-10px); }
 
 .cake-img {
     width: 100%;
     height: 250px;
     overflow: hidden;
-    border-bottom-right-radius: 80px; 
+    border-bottom-right-radius: 100px; /* Sida sawirka ku jirta */
     margin-bottom: 20px;
 }
 
@@ -115,124 +170,63 @@
     object-fit: cover;
 }
 
-
-.cake-info h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #333;
-}
+.cake-info h3 { font-size: 22px; color: #333; margin-bottom: 10px; }
 
 .cake-info p {
     font-size: 14px;
     color: #777;
+    padding: 0 20px;
     margin-bottom: 20px;
-    padding: 0 15px;
 }
-
 
 .order-now-btn {
-    background: #e65100;
+    background: #ff5200;
     color: #fff;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
     font-weight: 600;
-    display: inline-block;
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 82, 0, 0.2);
 }
 
-.order-now-btn:hover {
-    background: #c24400;
-    box-shadow: 0 5px 15px rgba(230, 81, 0, 0.3);
+/* --- Gallery Row (Hagaajin) --- */
+.image-row-tight {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.footer-bg {
-    background-color: #fff; 
-    padding: 80px 0;
-    width: 100%;
+/* --- Footer --- */
+.footer {
+    background: #111;
+    color: #bbb;
+    padding: 80px 0 30px;
 }
 
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 0 20px;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
 }
 
-
-.footer-col {
-    flex: 1;
+/* --- RESPONSIVE DESIGN (Mobile Friendly) --- */
+@media (max-width: 992px) {
+    .hero::before, .hero::after { display: none; } /* Ka saar sawirada dhinacyada tablet-ka */
+    .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-.footer-col.about {
-    flex: 1.5;
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Menu-ga qari mobile-ka (waxaad ku dari kartaa burger menu) */
+    
+    .hero-text h1 { font-size: 35px; }
+    .hero-text::before { font-size: 60px; top: -20px; }
+    
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .image-row-tight { grid-template-columns: repeat(2, 1fr); }
+    
+    .header-right { gap: 10px; }
+    .phone-info { display: none; }
 }
 
-
-.footer-logo {
-    color: #ff5200;
-    font-size: 26px;
-    margin-bottom: 20px;
-    font-weight: 800;
-}
-
-.footer-col p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-
-.footer-col h4 {
-    font-size: 18px;
-    margin-bottom: 25px;
-    color: #222;
-    font-weight: 700;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-    text-decoration: none;
-    color: #666;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-    color: #ff5200; 
-}
-
-
-.footer-phone {
-    color: #ff5200;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-    display: block;
-}
-
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    color: #ff5200;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+@media (max-width: 480px) {
+    .image-row-tight { grid-template-columns: 1fr; }
+    .hero { height: 250px; }
 }
